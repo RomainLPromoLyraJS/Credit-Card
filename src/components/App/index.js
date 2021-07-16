@@ -15,14 +15,16 @@ const [isFocus, setFocus] = useState("");
 
   return (
     <div className="App">
-      <Cards 
-      number={isNumber} 
-      name={isName} 
-      expiry={isExpiry}
-      cvc={isCvc} 
-      focused={isFocus} 
-      />
-      <form action="">
+      <div className="card">
+        <Cards 
+          number={isNumber} 
+          name={isName} 
+          expiry={isExpiry}
+          cvc={isCvc} 
+          focused={isFocus} 
+        />
+      </div>
+      <form className="card__form" action="">
         <input 
         type="tel" 
         name="number" 
