@@ -26,9 +26,10 @@ const [isFocus, setFocus] = useState("");
       </div>
       <form className="card__form" action="">
         <input 
-        type="tel" 
+        type="number" 
         name="number" 
-        placeholder="Card Number" 
+        placeholder="Card Number"
+        maxLength="19" 
         value={isNumber} 
         onChange={event => setNumber(event.target.value)}
         onFocus={event => setFocus(event.target.name)} />
@@ -36,20 +37,22 @@ const [isFocus, setFocus] = useState("");
         type="text" 
         name="name" 
         placeholder="Name" 
+        maxLength="17" 
         value={isName} 
         onChange={event => setName(event.target.value)}
         onFocus={event => setFocus(event.target.name)} />
         <input 
-        type="tel" 
+        type="number" 
         name="expiry" 
         placeholder="MM/YY Expiry" 
         value={isExpiry} 
         onChange={event => setExpiry(event.target.value)}
         onFocus={event => setFocus(event.target.name)} />
         <input 
-        type="tel" 
+        type="number" 
         name="cvc" 
         placeholder="CVC" 
+        // maxLength="3" -> doesn't work in this input
         value={isCvc} 
         onChange={event => setCvc(event.target.value)}
         onFocus={event => setFocus(event.target.name)} />
